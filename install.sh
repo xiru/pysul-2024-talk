@@ -11,9 +11,9 @@ for version in $(echo 3.8.19 3.9.19 3.10.14 3.11.9 3.12.4 3.13.0rc1 3.14.0a0); {
     echo ${version}
     rm -rf /opt/python/python-${version}
     if [ "$version" = "3.14.0a0" ]; then
+        rm -rf cpython
+        git clone https://github.com/python/cpython.git
         cd cpython
-        git clean -df
-        git pull
     else
         rm -rf Python-${version}
         tar -zxf Python-${version}.tgz
