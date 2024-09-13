@@ -13,7 +13,7 @@ sudo apt install llvm-18 clang-18
 
 # build python
 cd /opt/src
-for version in $(echo 3.13.0rc1 3.14.0a0); {
+for version in $(echo 3.13.0rc1 3.13.0rc2 3.14.0a0); {
     for variant in $(echo ft jit); {
         echo ${version}-${variant}
         rm -rf /opt/python/python-${version}-${variant}

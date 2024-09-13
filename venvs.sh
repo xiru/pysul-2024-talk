@@ -4,7 +4,7 @@ set -e
 
 # setup venvs
 cd /home/xiru
-for version in $(echo 3.8.19 3.9.19 3.10.14 3.11.9 3.12.4 3.13.0rc1 3.14.0a0); {
+for version in $(echo 3.8.19 3.9.19 3.10.14 3.11.9 3.12.4 3.13.0rc1 3.13.0rc2 3.14.0a0); {
     echo ${version}
     shortversion=${version%.*}
     rm -rf .venv-$version
@@ -14,7 +14,7 @@ for version in $(echo 3.8.19 3.9.19 3.10.14 3.11.9 3.12.4 3.13.0rc1 3.14.0a0); {
     deactivate
 }
 
-for version in $(echo 3.13.0rc1 3.14.0a0); {
+for version in $(echo 3.13.0rc1 3.13.0rc2 3.14.0a0); {
     for variant in $(echo ft jit); {
         echo ${version}-${variant}
         shortversion=${version%.*}

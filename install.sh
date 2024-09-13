@@ -7,7 +7,7 @@ sudo apt install build-essential libssl-dev libffi-dev libsqlite3-dev libncurses
 
 # build python
 cd /opt/src
-for version in $(echo 3.8.19 3.9.19 3.10.14 3.11.9 3.12.4 3.13.0rc1 3.14.0a0); {
+for version in $(echo 3.8.19 3.9.19 3.10.14 3.11.9 3.12.4 3.13.0rc1 3.13.0rc2 3.14.0a0); {
     echo ${version}
     rm -rf /opt/python/python-${version}
     if [ "$version" = "3.14.0a0" ]; then
